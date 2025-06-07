@@ -355,6 +355,37 @@
             }
         }
     </style>
+
+    <!-- Botón fijo para subir al top de la página -->
+    <button id="btn-top"
+        class="fixed bottom-6 right-6 z-50 bg-[var(--azul)] text-white rounded-2xl p-4 shadow-lg hover:bg-[var(--azul-claro)] transition-all duration-300"
+        style="display:none" aria-label="Subir al inicio">
+        ↑
+    </button>
+    <script>
+        // Mostrar el botón al hacer scroll
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('btn-top');
+            if (window.scrollY > 200) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+        // Scroll suave al top
+        document.getElementById('btn-top').onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+    <style>
+        @media (max-width: 1023px) {
+            footer .grid {
+                grid-template-columns: 1fr !important;
+                text-align: left !important;
+            }
+        }
+    </style>
+    
 </body>
 
 </html>
