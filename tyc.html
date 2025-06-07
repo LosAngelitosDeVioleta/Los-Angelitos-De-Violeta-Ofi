@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>Términos y Condiciones | LADV</title>
+
+    <!-- SEO básico -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Toda la información que necesitás sobre cómo adoptar, donar y ayudar a los animales rescatados.">
+    <meta name="keywords"
+        content="preguntas frecuentes, ayuda animales, adopción responsable, fundación mascotas, donaciones animales">
+    <meta property="og:title" content="Preguntas Frecuentes - Fundación Los Angelitos de Violeta">
+    <meta property="og:description"
+        content="Consultá todas las respuestas sobre adopción, donaciones y cuidado de mascotas en situación de calle.">
+
+    <!-- Autor -->
+    <meta name="author" content="Fundación Los Angelitos de Violeta">
+
+
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" href="./images/logo/logo.webp" type="image/x-icon">
+
+    <!-- css de los colores -->
+    <link rel="stylesheet" href="./css/colores.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-gray-800 bg-slate-50 min-h-screen"
+    style="background-image: radial-gradient(at 10% 20%, rgba(255,255,255,0.2) 0px, transparent 50%), radial-gradient(at 90% 80%, rgba(103,143,230,0.445) 0px, transparent 50%); font-size: 1.1rem;">
+
+    <!-- NAVBAR -->
+    <nav class="w-full border-b-2 border-[#25a6bd] bg-white">
+        <div class="max-w-[1600px] mx-auto flex items-center justify-between px-3 lg:px-8 py-4 lg:py-3">
+            <!-- Logo a la IZQUIERDA -->
+            <a href="./index.html" class="flex-shrink-0 flex items-center">
+                <span class="w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center">
+                    <img src="./images/logo/logo.webp"
+                        alt="Logo fundacion de mascotas - perros - Los Angelitos de Violeta"
+                        class="w-20 h-20 lg:w-60 lg:h-60 object-contain" />
+                </span>
+            </a>
+            <!-- Links para desktop a la DERECHA -->
+            <div class="hidden lg:flex gap-24">
+                <a href="./index.html"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Volver al Inicio
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="./contacto.html"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Contacto
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+            </div>
+            <!-- Menú hamburguesa SÓLO EN TABLET/MOBILE-->
+            <button id="hamburger-btn"
+                class="lg:hidden p-2 rounded-full focus:outline-none transition duration-500 ease-in-out hover:bg-[#dce8ec]"
+                aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#575757]" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+        </div>
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden flex-col items-center gap-3 pt-2 pb-4">
+            <a href="./index.html"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Volver al Inicio
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+            <a href="./contacto.html"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Contacto
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            btn.classList.toggle('scale-90');
+            btn.classList.toggle('bg-blue-400');
+        });
+    </script>
+    <!-- FIN NAVBAR -->
+
+    <!-- Términos Main -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <section class="grid lg:grid-cols-3 gap-10 items-start">
+            <!-- Columna 1: título + imagen -->
+            <div class="lg:col-span-1 text-center lg:text-left space-y-6">
+                <h1 class="text-5xl font-bold text-sky-900">Términos y Condiciones</h1>
+                <p class="text-gray-700 text-xl">
+                    Por favor, lee detenidamente nuestros términos y condiciones antes de utilizar nuestro sitio web o
+                    participar en nuestras actividades.
+                </p>
+                <img src="./images/tyc/tyc.webp" alt="Perro Términos" class="mx-auto lg:mx-0 w-full max-w-md">
+            </div>
+
+            <!-- Columnas 2 y 3: contenido de términos -->
+            <div class="lg:col-span-2">
+                <div
+                    class="bg-white/85 backdrop-blur-md p-8 rounded-lg shadow-md border border-gray-200 transition-all duration-300 hover:bg-white/95 hover:shadow-xl">
+                    <div class="mb-6 text-center">
+                        <h2 class="text-3xl font-bold text-sky-900">Fundación Los Angelitos de Violeta</h2>
+                        <p class="text-sm text-gray-500 mt-2">Última actualización: <span class="font-semibold">2 de
+                                Junio, 2025</span></p>
+                    </div>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        1. Información General
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Este sitio web es administrado por la Fundación Los Angelitos de Violeta, una organización sin
+                        fines de lucro con el objetivo de rescatar, cuidar y promover la adopción responsable de
+                        animales en situación de abandono o maltrato. Al acceder y utilizar este sitio web, el usuario
+                        acepta estos Términos y Condiciones en su totalidad. Si no está de acuerdo con alguna parte, por
+                        favor no utilice este sitio.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        2. Objeto del Sitio Web
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        El sitio web tiene como finalidad:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+                        <li>Dar visibilidad a la labor de la Fundación</li>
+                        <li>Promover la adopción responsable de animales</li>
+                        <li>Concientizar sobre la tenencia responsable</li>
+                        <li>Facilitar el contacto entre la comunidad y la Fundación para colaboraciones o ayuda
+                            solidaria</li>
+                    </ul>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        3. Uso Del Sitio
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Los usuarios se comprometen a:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+                        <li>Utilizar el sitio de manera responsable y respetuosa</li>
+                        <li>No realizar actividades ilícitas ni utilizar el sitio con fines fraudulentos</li>
+                        <li>No difundir contenido ofensivo, discriminatorio, violento o que atente contra la misión de
+                            la Fundación</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        La Fundación se reserva el derecho de limitar, suspender o cancelar el acceso a usuarios que
+                        infrinjan estos términos.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        4. Adopción De Animales
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        El proceso de adopción está sujeto a las siguientes condiciones:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                        <li>El interesado deberá completar un formulario con datos personales verídicos</li>
+                        <li>La Fundación evaluará cada solicitud para determinar la idoneidad del adoptante</li>
+                        <li>Se podrá realizar una entrevista personal y/o visita al domicilio</li>
+                        <li>La adopción implica la firma de un compromiso de tenencia responsable, conforme a la Ley
+                            Nacional 14.346 (protección contra el maltrato y actos de crueldad hacia los animales)</li>
+                        <li>La Fundación se reserva el derecho de rechazar solicitudes si considera que no garantizan el
+                            bienestar del animal</li>
+                    </ul>
+
+                    <h4 class="font-semibold text-blue-900 mt-6 mb-2 text-xl">Devolución Del Animal Adoptado</h4>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        La Fundación comprende que pueden surgir situaciones imprevistas que imposibiliten al adoptante
+                        continuar con la tenencia del animal. En tales casos, el adoptante deberá:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2 mb-6">
+                        <li>Comunicar su intención de devolución de forma inmediata y por escrito, explicando las
+                            razones justificadas</li>
+                        <li>Acordar con la Fundación la entrega del animal en condiciones óptimas de salud y bienestar
+                        </li>
+                        <li>No abandonar al animal ni transferirlo a terceros sin autorización de la Fundación</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        La Fundación evaluará cada caso y gestionará la reubicación del animal, priorizando siempre su
+                        bienestar. La devolución no implica reembolso de gastos asociados al proceso de adopción.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        5. Colaboraciones y Ayuda Solidaria
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Actualmente, el sitio web no cuenta con un sistema de donaciones en línea. Sin embargo, los
+                        usuarios interesados en colaborar con la Fundación (ya sea con alimentos, insumos, servicios
+                        veterinarios o transferencias) pueden comunicarse directamente a través de los medios de
+                        contacto disponibles en el sitio para coordinar la forma de ayuda.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        6. Propiedad Intelectual
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Todo el contenido del sitio, incluyendo textos, imágenes, logotipos y diseños, es propiedad de
+                        la Fundación o ha sido cedido para su uso, y está protegido por las leyes de propiedad
+                        intelectual. Está prohibida su reproducción total o parcial sin autorización previa.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        7. Protección De Datos Personales
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        La Fundación se compromete a proteger la privacidad de los usuarios conforme a la Ley N.º 25.326
+                        de Protección de Datos Personales. Los datos recolectados serán utilizados únicamente para los
+                        fines específicos del sitio (adopciones, contacto, colaboración, etc.) y no serán compartidos
+                        con terceros sin consentimiento del titular.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        8. Modificaciones
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        La Fundación podrá modificar estos Términos y Condiciones en cualquier momento. Las
+                        modificaciones entrarán en vigencia una vez publicadas en el sitio web. Se recomienda revisar
+                        periódicamente esta sección.
+                    </p>
+
+                    <h3 class="relative pl-6 mt-8 text-2xl font-bold text-gray-900">
+                        <span class="absolute left-0 top-2 h-6 w-2 bg-blue-900 rounded-md"></span>
+                        9. Jurisdicción
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Estos términos se rigen por las leyes de la República Argentina. Ante cualquier conflicto, las
+                        partes se someterán a los tribunales ordinarios con jurisdicción en la Ciudad Autónoma de Buenos
+                        Aires.
+                    </p>
+
+                    <div class="space-x-4 mt-4 text-center">
+                        <button onclick="aceptar()"
+                            class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-500 text-base font-medium transition duration-200">
+                            Aceptar
+                        </button>
+                        <button onclick="rechazar()"
+                            class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-500 text-base font-medium transition duration-200">
+                            Rechazar
+                        </button>
+                    </div>
+
+                    <div id="mensaje" class="mt-4 text-lg font-semibold text-center"></div>
+
+                    <script>
+                        function aceptar() {
+                            document.getElementById("mensaje").innerText = "¡Guau! Has aceptado los términos y condiciones 💗🐾";
+                            document.getElementById("mensaje").className = "mt-4 text-sky-700 font-semibold text-center";
+                        }
+
+                        function rechazar() {
+                            document.getElementById("mensaje").innerText = "Grrr... Has rechazado los términos. ¡Esperamos que cambies de opinión! 🐶";
+                            document.getElementById("mensaje").className = "mt-4 text-red-700 font-semibold text-center";
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-sky-950 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Los Angelitos de Violeta</h3>
+                    <p class="text-gray-300">Organización sin fines de lucro dedicada al rescate y adopción responsable
+                        de animales.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Contacto</h3>
+                    <p class="text-gray-300">info@angelitosdevioleta.org</p>
+                    <p class="text-gray-300">+54 11 1234-5678</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Redes</h3>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/instagram.webp" alt="Instagram">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/facebook.webp" alt="Facebook">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/whatsapp.webp" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./tyc.html" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+                        <li><a href="./faqss.html" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Responsive: footer en columna en mobile -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-gray-400 text-xs text-left lg:text-center">
+                <p>© 2023 Bonfigli María Emilia, Negrette Martina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        @media (max-width: 1023px) {
+            footer .grid {
+                grid-template-columns: 1fr !important;
+                text-align: left !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

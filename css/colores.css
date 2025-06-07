@@ -1,0 +1,18 @@
+:root {
+    /* Variables de color */
+    --azul-claro: #29cdff;
+    --azul: #219EBC;
+    --azul-medio: #219EBC;
+    --azul-transparente: rgba(4, 149, 185, 0.178);
+    --azul-transparentes: rgba(87, 202, 255, 0.281);
+    --azul-oscuro: #023b48;
+    --azul-oscuro-transparente: rgba(7, 43, 59, 0.747);
+    --naranja: #FB8500;
+    --amarillo: #ffb703;
+    --blanco: #ffffff;
+    --negro: #000000;
+
+
+    /* Variables de tipografía */
+    --font-family: 'DM Sans', sans-serif;
+}

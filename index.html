@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<html class="scroll-smooth">
+
+<head>
+
+    <title> Inicio - LADV - </title>
+
+    <!-- SEO básico -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rescatamos, rehabilitamos y damos en adopción a perros y gatos en situación de calle. Sumate donando, apadrinando o adoptando una mascota.">
+    <meta name="keywords"
+        content="fundación de animales, rescate de mascotas, adopción de perros, adopción de gatos, protección animal, perros en situación de calle, gatos en adopción, refugio de animales, mascotas en adopción, adopciones responsables">
+    <meta name="author" content="Los Angelitos de Violeta">
+    <meta name="robots" content="index, follow">
+
+    <!-- Autor -->
+    <meta name="author" content="Fundación Los Angelitos de Violeta">
+
+
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" href="./images/logo/logo.webp" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css de los colores -->
+    <link rel="stylesheet" href="./css/colores.css">
+
+    <style>
+        /* Carousel slide logic sin JS */
+        #slide1:checked~.carousel-content .slide-1,
+        #slide2:checked~.carousel-content .slide-2,
+        #slide3:checked~.carousel-content .slide-3 {
+            display: flex;
+        }
+
+        #slide1:checked~.carousel-content .slide-2,
+        #slide1:checked~.carousel-content .slide-3,
+        #slide2:checked~.carousel-content .slide-1,
+        #slide2:checked~.carousel-content .slide-3,
+        #slide3:checked~.carousel-content .slide-1,
+        #slide3:checked~.carousel-content .slide-2 {
+            display: none;
+        }
+
+        #slide1:checked~.carousel-prev label[for="slide3"],
+        #slide2:checked~.carousel-prev label[for="slide1"],
+        #slide3:checked~.carousel-prev label[for="slide2"] {
+            display: flex;
+        }
+
+        #slide1:checked~.carousel-next label[for="slide2"],
+        #slide2:checked~.carousel-next label[for="slide3"],
+        #slide3:checked~.carousel-next label[for="slide1"] {
+            display: flex;
+        }
+
+        .carousel-prev label,
+        .carousel-next label {
+            display: none;
+        }
+
+        /* SECCION COMENTARIOS */
+
+        /* Oculta los radio buttons */
+        .carousel-radio {
+            display: none;
+        }
+
+        /* Muestra solo la card activa */
+        .carousel-card {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            transition: opacity 0.5s;
+            z-index: 10;
+        }
+
+        #comentario-1:checked~.carousel-cards .card-1,
+        #comentario-2:checked~.carousel-cards .card-2,
+        #comentario-3:checked~.carousel-cards .card-3 {
+            opacity: 1;
+            pointer-events: auto;
+            position: relative;
+            z-index: 20;
+        }
+
+        #comentario-1:checked~.carousel-controls label[for="comentario-1"],
+        #comentario-2:checked~.carousel-controls label[for="comentario-2"],
+        #comentario-3:checked~.carousel-controls label[for="comentario-3"] {
+            background-color: var(--azul);
+        }
+    </style>
+</head>
+
+<body class="scroll-smooth">
+    <!-- NAVBAR -->
+    <nav class="w-full border-b-2 border-[#25a6bd] bg-white">
+        <div class="max-w-[1600px] mx-auto flex items-center justify-between px-3 lg:px-8 py-4 lg:py-3">
+            <!-- Logo a la IZQUIERDA -->
+            <a href="./index.html" class="flex-shrink-0 flex items-center">
+                <span class="w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center">
+                    <img src="./images/logo/logo.webp"
+                        alt="Logo fundacion de mascotas - perros - Los Angelitos de Violeta"
+                        class="w-20 h-20 lg:w-60 lg:h-60 object-contain" />
+                </span>
+            </a>
+            <!-- Links para desktop a la DERECHA -->
+            <div class="hidden lg:flex gap-8">
+
+                <a href="./index.html"
+                    class="text-[#575757] text-xl flex flex-col items-center font-semibold relative group transition">
+                    Inicio
+                    <span class="w-12 h-1 bg-[#25a6bd] mt-1 rounded block"></span>
+                </a>
+                <a href="#servicios"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Servicios
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="#beneficios"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Beneficios
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="#mascotas"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Ver Mascotas
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="#experiencias"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Experiencias
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="#ubicacion"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Ubicación
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+                <a href="./contacto.html"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Contacto
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+            </div>
+            <!-- Menú hamburguesa SÓLO EN TABLET/MOBILE-->
+            <button id="hamburger-btn"
+                class="lg:hidden p-2 rounded-full focus:outline-none transition duration-500 ease-in-out hover:bg-[#dce8ec]"
+                aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#575757]" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+        </div>
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden flex-col items-center gap-3 pt-2 pb-4">
+            <a href="./index.html"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center font-semibold relative group">
+                Inicio
+                <span class="w-12 h-1 bg-[#25a6bd] mt-1 rounded block"></span>
+            </a>
+            <a href="#servicios"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Servicios
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+            <a href="#beneficios"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Servicios
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+            <a href="#"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Ver Mascotas
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+            <a href="./contacto.html"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Contacto
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            btn.classList.toggle('scale-90');
+            btn.classList.toggle('bg-blue-400');
+        });
+    </script>
+
+    <!-- FIN NAVBAR -->
+
+    <!-- SECCION NUESTRA HISTORIA Y SERVICIOS -->
+    <!-- Sección Nuestra Historia -->
+    <!-- Sección Bienvenida -->
+    <section class="relative min-h-[90vh] flex items-center justify-end pr-[4%] bg-cover bg-center bg-no-repeat
+      bg-[url('./images/portada/fondo_celu2.webp')] 
+      md:bg-[url('./images/portada/fondo.webp')]">
+        <div class="max-w-[700px] w-full text-right z-10">
+            <h1 class="font-light text-4xl leading-snug text-white mb-8 lg:text-6xl">
+                No podes comprar <span class="font-extrabold text-[var(--azul-claro)] ">amor</span><br>
+                pero podes <span class="font-extrabold text-[var(--azul-claro)]">adoptarlo</span>
+            </h1>
+            <p class="text-xl text-white leading-relaxed mb-10 lg:text-2xl">
+                Transformamos vidas peludas en finales felices,<br>
+                promoviendo la adopción consciente y el cuidado responsable
+            </p>
+            <div class="flex items-center justify-end ">
+                <div class="inline-flex gap-5">
+                    <a href="#" class="inline-block px-9 py-4 text-base bg-[var(--azul-oscuro)] 
+            border border-[var(--azul-oscuro)] text-white transition-all duration-400 
+            hover:bg-transparent hover:text-[var(--azul)] 
+            hover:border-[var(--azul)]">
+                        Conócenos
+                    </a>
+                    <a href="./contacto.html" class="inline-block px-9 py-4 text-base bg-[var(--blanco)] 
+            border border-[var(--blanco)] text-[var(--azul-oscuro)] transition-all duration-400 
+            hover:bg-transparent hover:text-[var(--blanco)] hover:border-white">
+                        Contacto
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="servicios" class="bg-gradient-to-b from-[#a0d4ff] via-[#d0f0ff] to-white">
+        <div
+            class="flex flex-col w-full px-[5%] sm:-my-0 mb-2  xl:bg-cover xl:bg-center xl:bg-no-repeat xl:bg-[url('./images/Nuestra_Historia/fondo2.webp')] ">
+            <div class="mt-32">
+                <h1 class="servicios text-3xl text-[var(--azul-oscuro)] p-2 text-center font-bold  mb-4
+                md:text-center
+                lg:text-3xl
+                xl:text-5xl">
+                    Nuestros Servicios
+                </h1>
+            </div>
+            <!-- Cards en fila, nunca apiladas -->
+            <div class="max-w-4xl mx-auto flex flex-col gap-12">
+                <!-- Card 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-0 md:gap-8">
+                    <div class="w-full md:w-1/2">
+                        <img src="./images/iconos_servicios/rescate.webp" alt="Perro en un refugio"
+                            class="w-full h-64 object-cover rounded-md shadow-md">
+                    </div>
+                    <div class="w-full md:w-1/2 bg-white p-8 flex flex-col justify-center rounded-md shadow-md">
+                        <h2 class="text-2xl font-bold mb-2 tracking-wide text-[var(--azul)]">Rescate y
+                            Rehabilitación</h2>
+                        <p class="text-gray-700 mb-4 text-lg">Rescatamos animales en situación de calle o maltrato,
+                            brindándoles atención veterinaria,
+                            alimentación y contención emocional hasta su recuperación.</p>
+
+                    </div>
+                </div>
+                <!-- Card 2 (reverse) -->
+                <div class="flex flex-col md:flex-row-reverse  items-center gap-0 md:gap-8">
+                    <div class="w-full md:w-1/2">
+                        <img src="./images/iconos_servicios/adopcion.webp" alt="Perro sonriendo"
+                            class="w-full h-64 object-cover rounded-md shadow-md">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-gradient-to-b from-white to-[#d0f0ff] p-8 flex flex-col justify-center rounded-md shadow-md">
+                        <h2 class="text-2xl font-bold mb-2 tracking-wide text-[var(--azul)]"> Adopciones
+                            Responsables</h2>
+                        <p class="text-gray-700 mb-4 text-lg">Promovemos la adopción consciente, conectando animales
+                            recuperados con familias amorosas, mediante
+                            entrevistas y seguimientos que aseguran su bienestar.</p>
+
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-0 md:gap-8">
+                    <div class="w-full md:w-1/2">
+                        <img src="./images/iconos_servicios/educacion.webp" alt="Caricia de humano y perro"
+                            class="w-full h-64 object-cover rounded-md shadow-md">
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 bg-gradient-to-b from-[#d0f0ff] to-[#a0d4ff] p-8 flex flex-col justify-center rounded-md shadow-md">
+                        <h2 class="text-2xl font-bold mb-2 tracking-wide text-[var(--azul)]">Concientización y
+                            Educación</h2>
+                        <p class="text-gray-700 mb-4 text-lg">Realizamos campañas educativas y de sensibilización
+                            sobre
+                            el cuidado responsable de los animales, la
+                            importancia de la castración y la tenencia ética.</p>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- FIN SECCION NUESTRA HISTORIA Y SERVICIOS -->
+
+
+    <!-- SECCION BENEFICIOS -->
+
+    <section id="beneficios" class="mt-32 pt-20 pb-32 bg-gradient-to-b from-amber-50 to-orange-100">
+        <div class="max-w-[1500px] mx-auto pt-6 px-4">
+            <h1
+                class="text-3xl md:text-3xl xl:text-5xl font-bold text-center mb-14 font-[Playfair_Display] tracking-tight text-gray-600 drop-shadow-sm">
+                Gracias por Adoptar: <span class="text-orange-500 font-light">Esto es para Vos</span>
+            </h1>
+
+
+
+            <!-- Desktop (≥xl): Grilla 4x2 -->
+            <div
+                class="hidden xl:grid grid-cols-4 grid-rows-2 gap-0 mx-4 overflow-hidden rounded-2xl shadow-lg bg-white ">
+                <div class="w-full h-full aspect-square flex items-stretch overflow-hidden">
+                    <img src="./images/beneficios/kit.webp" alt="Kit de bienvenida"
+                        class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                </div>
+                <div class="flex flex-col justify-center p-6 bg-orange-200 w-full h-full">
+                    <h2 class="font-bold text-2xl text-orange-600 mb-3">Kit de bienvenida</h2>
+                    <p class="text-lg">
+                        Recibí un kit especial con comedero, bolsita de alimento, collar personalizado y una guía con
+                        consejos
+                        para ayudar a tu nuevo compañero a adaptarse mejor.
+                    </p>
+                </div>
+                <div class="w-full h-full aspect-square flex items-stretch overflow-hidden">
+                    <img src="./images/beneficios/veterinaria.webp" alt="Baño y atención veterinaria"
+                        class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                </div>
+                <div class="flex flex-col justify-center p-6 bg-orange-200 w-full h-full">
+                    <h2 class="font-bold text-2xl text-orange-600 mb-3">Baño y atención veterinaria</h2>
+                    <p class="text-lg">
+                        Accedé a tu primer baño gratuito o un descuento exclusivo en la atención veterinaria inicial de
+                        tu
+                        mascota adoptada.
+                    </p>
+                </div>
+                <div class="flex flex-col justify-center p-6 bg-orange-200 w-full h-full">
+                    <h2 class="font-bold text-2xl text-orange-600 mb-3">Certificado de adopción</h2>
+                    <p class="text-lg">
+                        Te entregamos un certificado personalizado con el nombre de tu mascota y el tuyo, para que
+                        recuerdes
+                        este hermoso momento para siempre.
+                    </p>
+                </div>
+                <div class="w-full h-full aspect-square flex items-stretch overflow-hidden">
+                    <img src="./images/beneficios/certificado.webp" alt="Certificado de adopción"
+                        class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                </div>
+                <div class="flex flex-col justify-center p-6 bg-orange-200 w-full h-full">
+                    <h2 class="font-bold text-2xl text-orange-600 mb-3">Indumentaria con descuento</h2>
+                    <p class="text-lg">
+                        Accedé a ropa canina al 50% al realizar la adopción. ¡Que tu mascota también luzca increíble!
+                    </p>
+                </div>
+                <div class="w-full h-full aspect-square flex items-stretch overflow-hidden">
+                    <img src="./images/beneficios/ropa.webp" alt="Indumentaria con descuento"
+                        class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                </div>
+            </div>
+
+            <!-- Tablet/Mobile -->
+            <div class="flex flex-col items-center justify-center gap-8  xl:hidden">
+                <div class="flex flex-col  w-1/2  md:flex-row bg-white rounded-2xl shadow-md overflow-hidden h-full">
+                    <div class="aspect-square md:aspect-[4/3] md:w-1/2 w-full flex items-stretch overflow-hidden">
+                        <img src="./images/beneficios/kit.webp" alt="Kit de bienvenida"
+                            class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                    </div>
+                    <div class="md:w-1/2 flex items-center p-6 bg-orange-200 w-full">
+                        <div>
+                            <h2 class="font-bold text-xl md:text-2xl text-cyan-900 mb-3">Kit de bienvenida</h2>
+                            <p class="text-lg">
+                                Recibí un kit especial con comedero, bolsita de alimento, collar personalizado y una
+                                guía
+                                con
+                                consejos para ayudar a tu nuevo compañero a adaptarse mejor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col  w-1/2  md:flex-row bg-white rounded-2xl shadow-md overflow-hidden h-full">
+                    <div class="md:w-1/2 order-2 md:order-1 flex items-center p-6 bg-sky-200 w-full">
+                        <div>
+                            <h2 class="font-bold text-xl md:text-2xl text-cyan-900 mb-3">Baño y atención veterinaria
+                            </h2>
+                            <p class="text-lg">
+                                Accedé a tu primer baño gratuito o un descuento exclusivo en la atención veterinaria
+                                inicial
+                                de
+                                tu mascota adoptada.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="aspect-square md:aspect-[4/3] md:w-1/2 order-1 md:order-2 w-full flex items-stretch overflow-hidden">
+                        <img src="./images/beneficios/veterinaria.webp" alt="Baño y atención veterinaria"
+                            class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col  w-1/2  md:flex-row bg-white rounded-2xl shadow-md overflow-hidden h-full">
+                    <div class="aspect-square md:aspect-[4/3] md:w-1/2 w-full flex items-stretch overflow-hidden">
+                        <img src="./images/beneficios/certificado.webp" alt="Certificado de adopción"
+                            class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                    </div>
+                    <div class="md:w-1/2 flex items-center p-6 bg-yellow-100 w-full">
+                        <div>
+                            <h2 class="font-bold text-xl md:text-2xl text-cyan-900 mb-3">Certificado de adopción</h2>
+                            <p class="text-lg">
+                                Te entregamos un certificado personalizado con el nombre de tu mascota y el tuyo, para
+                                que
+                                recuerdes este hermoso momento para siempre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col  w-1/2  md:flex-row bg-white rounded-2xl shadow-md overflow-hidden h-full">
+                    <div class="md:w-1/2 order-2 md:order-1 flex items-center p-6 bg-pink-200 w-full">
+                        <div>
+                            <h2 class="font-bold text-xl md:text-2xl text-cyan-900 mb-3">Indumentaria con descuento</h2>
+                            <p class="text-lg">
+                                Accedé a ropa canina al 50% al realizar la adopción. ¡Que tu mascota también luzca
+                                increíble!
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="aspect-square md:aspect-[4/3] md:w-1/2 order-1 md:order-2 w-full flex items-stretch overflow-hidden">
+                        <img src="./images/beneficios/ropa.webp" alt="Indumentaria con descuento"
+                            class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-300 ease-in-out" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIN SECCION BENEFICIOS -->
+
+
+    <!-- SECCION NUESTROS RESCATADOS -->
+    <section id="mascotas" class="relative pt-32 pb-32">
+        <div class="absolute inset-0 bg-fixed bg-center bg-cover"
+            style="background-image: url('./images/portada/patron.webp'); opacity: 0.3; z-index: -1;"></div>
+        <div class="max-w-6xl mx-auto px-4 ">
+            <h2 class="text-2xl font-bold text-center mb-3 text-[var(--azul-oscuro)] lg:text-3xl xl:text-5xl">Nuestros
+                Rescatados</h2>
+            <p class="text-center text-gray-600 italic text-xl mb-8">Esperando una oportunidad para un nuevo comienzo
+            </p>
+            <!-- Carousel sin JS con flechas -->
+            <div class="relative flex flex-col items-center">
+                <!-- Radio buttons -->
+                <input type="radio" name="carousel" id="slide1" class="hidden" checked>
+                <input type="radio" name="carousel" id="slide2" class="hidden">
+                <input type="radio" name="carousel" id="slide3" class="hidden">
+                <!-- Slides -->
+                <div class="carousel-content w-full flex justify-center items-center relative min-h-[350px]">
+                    <!-- Slide 1 -->
+                    <div class="slide-1 w-full flex justify-center gap-6 absolute left-0 top-0">
+                        <!-- Card 1 - SIEMPRE visible en mobile (solo esta) y desktop -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl block">
+                            <img src="./images/carrousel/dog_1.webp" alt="Toby"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">
+                                    - Pequeño y curioso -
+                                </h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Lupi</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 2 meses</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 - SOLO visible en sm+ -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_2.webp" alt="Perrito rescatado Toby"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Aventurero y juguetón -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Toby</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 8 meses</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 - SOLO visible en sm+ -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_3.webp" alt="Perrito rescatado Rocko"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Protector y leal -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Rocko</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 5 años</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide-2 w-full flex justify-center gap-6 absolute left-0 top-0">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl block">
+                            <img src="./images/carrousel/dog_4.webp" alt="Perrito rescatado Charly"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Compañero fiel -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Charly</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 8 años</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_5.webp" alt="Perrita rescatada Masha"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Tranquila y amigable -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Masha</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 2 años</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Hembra</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_6.webp" alt="Perrito rescatado Max"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Amigable y compañero -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Max</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 2 meses</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide-3 w-full flex justify-center gap-6 absolute left-0 top-0">
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl block">
+                            <img src="./images/carrousel/dog_7.webp" alt="Perrita rescatada Bambi"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Ágil y juguetona -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Bambi</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 1 año</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Hembra</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_8.webp" alt="Perrito rescatado Thor"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Tranquilo y Compañero -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Thor</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 3 años</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Macho</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="bg-white rounded-xl shadow-lg w-72 border-2 border-gray-200 hover:border-sky-400 transition-all duration-300 hover:shadow-2xl hidden lg:block
+">
+                            <img src="./images/carrousel/dog_9.webp" alt="Perrita rescatada Mayu"
+                                class="rounded-t-xl w-full h-60 object-cover">
+                            <div class="p-5">
+                                <h5 class="text-lg text-[var(--azul)] font-bold mb-1">-
+                                    Guerrera y amigable -</h5>
+                                <h5 class="text-2xl font-bold mb-2 italic">Mayu</h5>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:space-x-2 text-gray-700 text-base">
+                                    <span class="text-lg">Edad: 2 años</span>
+                                    <span class="font-bold hidden lg:block
+">•</span>
+                                    <span class="text-lg">Sexo: Hembra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Flechas SOLO 2 -->
+                <div class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                    <label for="slide3"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)] transition">&#8592;</label>
+                    <label for="slide1"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)]  transition">&#8592;</label>
+                    <label for="slide2"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)] transition">&#8592;</label>
+                </div>
+                <div class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 z-10">
+                    <label for="slide2"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)]  transition">&#8594;</label>
+                    <label for="slide3"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)]  transition">&#8594;</label>
+                    <label for="slide1"
+                        class="p-4 cursor-pointer bg-[var(--azul)] text-white rounded-full p-2 mx-1 hover:bg-[var(--azul-claro)]  transition">&#8594;</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIN SECCION NUESTROS RESCATADOS -->
+
+    <section id="experiencias"
+        class="bg-gradient-to-b from-white via-blue-100 to-blue-300 py-8 flex flex-col items-center mt-0 pb-32">
+        <div>
+            <h1 class="text-3xl text-[var(--azul-oscuro)] pt-20 text-center font-bold mb-4 md:text-center xl:text-5xl">
+                Adopciones que Inspiran
+            </h1>
+        </div>
+        <div id="comentarios-carousel" class="relative w-full max-w-2xl mx-auto" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-[380px] sm:h-[360px] md:h-[400px] overflow-visible flex items-center justify-center">
+                <!-- Comentario 1 -->
+                <div class="carousel-slide block duration-700 ease-in-out flex flex-col items-center h-full bg-[#f3f4f8] rounded-2xl shadow-lg px-8 py-10 mx-2 w-full max-w-xl"
+                    data-carousel-item>
+                    <span class="text-4xl text-[var(--azul)] font-bold mb-2">“</span>
+                    <p class="text-gray-700 text-center md:text-lg mb-4 px-2">
+                        Cuando conocí a Luna en la fundación, su mirada me conquistó. Gracias a Los Angelitos de
+                        Violeta, hoy tengo una compañera incondicional que me llena de alegría cada día.
+                    </p>
+                    <div class="font-semibold text-gray-800 mb-1">María Bravo <span
+                            class="font-normal text-gray-500 text-sm">· Córdoba</span></div>
+                    <div class="flex justify-center mb-2">
+                        <img src="./images/comentarios/cliente1.jpg" alt="Dueña con mascota adoptada de Córdoba Capital"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-[var(--azul-transparente)] shadow">
+                    </div>
+                </div>
+                <!-- Comentario 2 -->
+                <div class="carousel-slide hidden duration-700 ease-in-out flex flex-col items-center h-full bg-[#f3f4f8] rounded-2xl shadow-lg px-8 py-10 mx-2 w-full max-w-xl"
+                    data-carousel-item>
+                    <span class="text-4xl text-[var(--azul)] font-bold mb-2">“</span>
+                    <p class="text-gray-700 text-center md:text-lg mb-4 px-2">
+                        Nunca imaginé que un pequeño gesto como la adopción pudiera transformar tanto. Ahora Coco es
+                        parte
+                        de mi familia, y siempre estaré agradecida por el amor y el cuidado que recibió antes de llegar
+                        a casa.
+                    </p>
+                    <div class="font-semibold text-gray-800 mb-1">Florencia R. <span
+                            class="font-normal text-gray-500 text-sm">· Alta Córdoba</span></div>
+                    <div class="flex justify-center mb-2">
+                        <img src="./images/comentarios/cliente2.jpg" alt="Dueña con mascota adoptada de Alta Córdoba"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-[var(--azul-transparente)] shadow">
+                    </div>
+                </div>
+                <!-- Comentario 3 -->
+                <div class="carousel-slide hidden duration-700 ease-in-out flex flex-col items-center h-full bg-[#f3f4f8] rounded-2xl shadow-lg px-8 py-10 mx-2 w-full max-w-xl"
+                    data-carousel-item>
+                    <span class="text-4xl text-[var(--azul)] font-bold mb-2">“</span>
+                    <p class="text-gray-700 text-center md:text-lg mb-4 px-2">
+                        El seguimiento post‑adopción de la fundación es excepcional. Con su asesoramiento veterinario y
+                        emocional, Ángel se adaptó en tiempo récord a su nuevo hogar.
+                    </p>
+                    <div class="font-semibold text-gray-800 mb-1">Sofia Ríos <span
+                            class="font-normal text-gray-500 text-sm">· Río Cuarto</span></div>
+                    <div class="flex justify-center mb-2">
+                        <img src="./images/comentarios/cliente3.jpg" alt="Dueña con mascota adoptada de Río Cuarto"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-[var(--azul-transparente)] shadow">
+                    </div>
+                </div>
+                <!-- Flechas -->
+                <button type="button" id="carousel-prev" aria-label="Anterior"
+                    class="carousel-arrow absolute z-40 flex items-center justify-center bg-white/80 group-hover:bg-[var(--azul)] group-hover:text-white text-[var(--azul)] shadow transition border-2 border-white">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 1 1 5l4 4" />
+                    </svg>
+                    <span class="sr-only">Anterior</span>
+                </button>
+                <button type="button" id="carousel-next" aria-label="Siguiente"
+                    class="carousel-arrow absolute z-40 flex items-center justify-center bg-white/80 group-hover:bg-[var(--azul)] group-hover:text-white text-[var(--azul)] shadow transition border-2 border-white">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="sr-only">Siguiente</span>
+                </button>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+                <button type="button" class="w-3 h-3 rounded-full bg-[var(--azul-transparente)]" aria-current="true"
+                    aria-label="Comentario 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-[var(--azul-transparente)]" aria-current="false"
+                    aria-label="Comentario 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-[var(--azul-transparente)]" aria-current="false"
+                    aria-label="Comentario 3" data-carousel-slide-to="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Card grande y que no se achique demasiado */
+        #comentarios-carousel .rounded-2xl {
+            min-height: 340px;
+            max-width: 540px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            #comentarios-carousel .rounded-2xl {
+                min-height: 400px;
+                max-width: 680px;
+                font-size: 1.18rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        /* Flechas SIEMPRE dentro del card (no fuera), bien centradas */
+        #comentarios-carousel .carousel-arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 9999px;
+            z-index: 50;
+            position: absolute;
+        }
+
+        #carousel-prev {
+            left: 8px;
+        }
+
+        #carousel-next {
+            right: 8px;
+        }
+
+        /* En móvil, flechas más pequeñas y bajan un poco para no tapar contenido */
+        @media (max-width: 640px) {
+            #comentarios-carousel .carousel-arrow {
+                width: 38px;
+                height: 38px;
+                top: 60%;
+            }
+
+            #carousel-prev {
+                left: 4px;
+            }
+
+            #carousel-next {
+                right: 4px;
+            }
+
+            #comentarios-carousel .rounded-2xl {
+                min-height: 370px;
+                max-width: 98vw;
+                width: 98vw;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Carrusel simple en JS vanilla
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('#comentarios-carousel .carousel-slide');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dots = document.querySelectorAll('#comentarios-carousel [data-carousel-slide-to]');
+            let current = 0;
+
+            function showSlide(idx) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('block', i === idx);
+                    slide.classList.toggle('hidden', i !== idx);
+                });
+                dots.forEach((dot, i) => {
+                    dot.setAttribute('aria-current', i === idx ? "true" : "false");
+                    dot.classList.toggle('ring-2', i === idx);
+                    dot.classList.toggle('ring-[var(--azul)]', i === idx);
+                });
+                current = idx;
+            }
+            prevBtn.addEventListener('click', () => {
+                let idx = (current - 1 + slides.length) % slides.length;
+                showSlide(idx);
+            });
+            nextBtn.addEventListener('click', () => {
+                let idx = (current + 1) % slides.length;
+                showSlide(idx);
+            });
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => showSlide(idx));
+            });
+            // inicializa
+            showSlide(0);
+        });
+    </script>
+
+    <!-- SECCION HORARIOS Y MAPS -->
+    <section id="ubicacion" class="relative py-16 md:py-24 px-2 bg-white"
+        style="background: url('./images/portada/fondoo.webp') center/cover no-repeat fixed;">
+        <div class="absolute inset-0"></div>
+        <div
+            class="relative max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-8 items-stretch rounded-3xl shadow-2xl px-4">
+            <!-- Mapa -->
+            <div class="flex-1 min-w-[280px] rounded-3xl overflow-hidden shadow-lg border-4 border-blue-300 bg-white">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.1084499557674!2d-64.10002778829251!3d-31.35598639322783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329654777ad3c1%3A0x418ddd10e8f4ed29!2sC.%20de%20las%20Granjas%2C%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1746335328024!5m2!1sen!2sar"
+                    class="w-full h-[320px] md:h-[400px] lg:h-[440px]" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- Horarios -->
+            <div
+                class="flex-1 min-w-[280px] bg-gradient-to-br from-blue-300 via-blue-200 to-blue-100 text-gray-700 rounded-3xl shadow-lg p-10 md:p-14 flex flex-col justify-center">
+                <h3 class="text-3xl md:text-4xl font-mono mb-7 text-left drop-shadow">Horarios de Atención</h3>
+                <ul class="space-y-4 text-lg md:text-xl">
+                    <li><b>Lunes a Viernes:</b> 9:00 AM - 7:00 PM</li>
+                    <li><b>Sábados:</b> 10:00 AM - 4:00 PM</li>
+                    <li><b>Domingos y feriados:</b>
+                        <span">Cerrado</span>
+                    </li>
+                    <li>
+                        <b>Teléfono:</b>
+                        <a href="tel:+5493512345678" class="underline hover:text-orange-200 transition">+54 9 351 234
+                            5678</a>
+                    </li>
+                    <li>
+                        <b>Email:</b>
+                        <a href="mailto:contacto@tuempresa.com"
+                            class="underline hover:text-orange-200 transition">contacto@tuempresa.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- FIN SECCION HORARIOS Y MAPS -->
+
+    <!-- Footer -->
+    <footer class="bg-sky-950 text-white py-12 ">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Los Angelitos de Violeta</h3>
+                    <p class="text-gray-300">Organización sin fines de lucro dedicada al rescate y adopción responsable
+                        de animales.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Contacto</h3>
+                    <p class="text-gray-300">info@angelitosdevioleta.org</p>
+                    <p class="text-gray-300">+54 11 1234-5678</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Redes</h3>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/instagram.webp" alt="Instagram">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/facebook.webp" alt="Facebook">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/whatsapp.webp" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./tyc.html" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+                        <li><a href="./faqss.html" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Responsive: footer en columna en mobile -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-gray-400 text-xs text-left lg:text-center">
+                <p>© 2023 Bonfigli María Emilia, Negrette Martina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón fijo para subir al top de la página -->
+    <button id="btn-top"
+        class="fixed bottom-6 right-6 z-50 bg-[var(--azul)] text-white rounded-2xl p-4 shadow-lg hover:bg-[var(--azul-claro)] transition-all duration-300"
+        style="display:none" aria-label="Subir al inicio">
+        ↑
+    </button>
+    <script>
+        // Mostrar el botón al hacer scroll
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('btn-top');
+            if (window.scrollY > 200) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+        // Scroll suave al top
+        document.getElementById('btn-top').onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+    <style>
+        @media (max-width: 1023px) {
+            footer .grid {
+                grid-template-columns: 1fr !important;
+                text-align: left !important;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

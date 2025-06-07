@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>Contacto | LADV</title>
+
+    <!-- SEO básico -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactanos para adoptar, donar o colaborar con nuestra fundación. Tu ayuda salva vidas.">
+    <meta name="keywords"
+        content="contacto fundación animales, adopción mascotas, donar refugio, colaborar con fundación, ayuda animales callejeros">
+    <meta property="og:title" content="Contacto - Fundación Los Angelitos de Violeta">
+    <meta property="og:description"
+        content="Comunicate con nosotros para sumarte al rescate, adopción y cuidado de perros y gatos en situación de calle.">
+
+    <!-- Autor -->
+    <meta name="author" content="Fundación Los Angelitos de Violeta">
+
+
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" href="./images/logo/logo.webp" type="image/x-icon">
+
+    <!-- css de los colores -->
+    <link rel="stylesheet" href="./css/colores.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-white via-orange-100 to-orange-400 flex flex-col">
+    <!-- NAVBAR -->
+    <nav class="w-full border-b-2 border-[#25a6bd] bg-white">
+        <div class="max-w-[1600px] mx-auto flex items-center justify-between px-3 lg:px-8 py-4 lg:py-3">
+            <!-- Logo a la IZQUIERDA -->
+            <a href="./index.html" class="flex-shrink-0 flex items-center">
+                <span class="w-28 h-28 lg:w-32 lg:h-32 flex items-center justify-center">
+                    <img src="./images/logo/logo.webp"
+                        alt="Logo fundacion de mascotas - perros - Los Angelitos de Violeta"
+                        class="w-20 h-20 lg:w-60 lg:h-60 object-contain" />
+                </span>
+            </a>
+            <!-- Links para desktop a la DERECHA -->
+            <div class="hidden lg:flex gap-24">
+                <a href="./index.html"
+                    class="text-[#575757] text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                    Volver al Inicio
+                    <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+                </a>
+            </div>
+            <!-- Menú hamburguesa SÓLO EN TABLET/MOBILE-->
+            <button id="hamburger-btn"
+                class="lg:hidden p-2 rounded-full focus:outline-none transition duration-500 ease-in-out hover:bg-[#dce8ec]"
+                aria-label="Abrir menú">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#575757]" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+
+        </div>
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden flex-col items-center gap-3 pt-2 pb-4">
+            <a href="./index.html"
+                class="text-[#575757] text-base md:text-xl flex flex-col items-center relative group hover:text-[#25a6bd] transition">
+                Volver al Inicio
+                <span class="w-0 group-hover:w-12 h-1 bg-[#25a6bd] mt-1 rounded transition-all duration-300"></span>
+            </a>
+        </div>
+    </nav>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            btn.classList.toggle('scale-90');
+            btn.classList.toggle('bg-blue-400');
+        });
+    </script>
+    <!-- FIN NAVBAR -->
+
+
+    <!-- CONTENIDO PRINCIPAL DE CONTACTO -->
+    <main class="flex-grow flex items-center justify-center py-10 px-2">
+        <div class="w-full max-w-6xl mx-auto">
+            <p class="text-center text-xs uppercase text-sky-700 mb-2 tracking-widest font-semibold">Contáctanos</p>
+            <h1 class="text-3xl md:text-5xl font-bold text-center mb-10 text-sky-700">Nos encantaría hablar contigo</h1>
+            <!-- Card principal -->
+            <div
+                class="flex flex-col lg:flex-row w-full bg-white/90 rounded-2xl shadow-2xl overflow-hidden border border-blue-200 mx-auto max-w-5xl min-h-[480px]">
+                <!-- Imagen a la izquierda (visible desde 1024px en adelante) -->
+                <div class="hidden lg:flex w-full lg:w-1/2 items-stretch">
+                    <img src="./images/contacto/contacto.webp" alt="Perro contacto"
+                        class="w-full h-full object-cover object-center" />
+                </div>
+
+                <!-- Formulario a la derecha (ocupa todo en mobile) -->
+                <div class="w-full lg:w-1/2 flex-1 flex flex-col justify-center px-8 py-10 bg-white sm:rounded-r-2xl">
+                    <h2 class="text-2xl font-bold text-[#25a6bd] mb-2">Hacé tu consulta</h2>
+                    <p class="text-slate-600 text-base mb-6">
+                        Enseguida te respondemos, ¡estamos moviendo colitas de emoción!
+                    </p>
+                    <form class="flex flex-col gap-4" autocomplete="off">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <input type="text" placeholder="Nombre"
+                                class="flex-1 p-3 rounded-md bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-[#25a6bd] focus:border-[#25a6bd] transition" />
+                            <input type="text" placeholder="Apellido"
+                                class="flex-1 p-3 rounded-md bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-[#25a6bd] focus:border-[#25a6bd] transition" />
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <input type="email" placeholder="Email"
+                                class="flex-1 p-3 rounded-md bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-[#25a6bd] focus:border-[#25a6bd] transition" />
+                            <input type="text" placeholder="Asunto"
+                                class="flex-1 p-3 rounded-md bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-[#25a6bd] focus:border-[#25a6bd] transition" />
+                        </div>
+                        <textarea rows="6" placeholder="Deja aquí tu mensaje :)"
+                            class="w-full p-3 rounded-md bg-blue-50 border border-blue-200 focus:outline-none focus:ring-2 focus:ring-[#25a6bd] focus:border-[#25a6bd] transition"></textarea>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-[#25a6bd] to-blue-400 text-white font-semibold py-3 rounded-md hover:from-blue-700 hover:to-blue-500 transition duration-700 ease-in-out text-lg shadow-md mt-2">Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-950 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Los Angelitos de Violeta</h3>
+                    <p class="text-gray-300">Organización sin fines de lucro dedicada al rescate y adopción responsable
+                        de animales.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Contacto</h3>
+                    <p class="text-gray-300">info@angelitosdevioleta.org</p>
+                    <p class="text-gray-300">+54 11 1234-5678</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Redes</h3>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/instagram.webp" alt="Instagram">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/facebook.webp" alt="Facebook">
+                        </a>
+                        <a href="#" class="transition transform hover:scale-110 hover:bg-sky-700 rounded-full p-1">
+                            <img class="w-6 h-6" src="./images/footer/whatsapp.webp" alt="WhatsApp">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./tyc.html" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+                        <li><a href="./faqss.html" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Responsive: footer en columna en mobile -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-gray-400 text-xs text-left lg:text-center">
+                <p>© 2023 Bonfigli María Emilia, Negrette Martina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        @media (max-width: 1023px) {
+            footer .grid {
+                grid-template-columns: 1fr !important;
+                text-align: left !important;
+            }
+        }
+    </style>
+</body>
+
+</html>
